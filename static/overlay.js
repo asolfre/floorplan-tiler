@@ -24,7 +24,7 @@ Overlay.prototype = new google.maps.OverlayView;
 /**
  * @const
  */
-Overlay.MAX_DIMENSION_ = 800;
+Overlay.MAX_DIMENSION_ = 2400;
 
 /**
  * Resize the target image
