@@ -2,7 +2,7 @@
 // Author: Chris Broadfoot (cbro@google.com)
 // Author: Andrew Gerrand (adg@google.com)
 
-package overlaytiler
+package floorplantiler
 
 import (
 	"archive/zip"
@@ -282,7 +282,8 @@ func addTilesToZip(c appengine.Context, z *zip.Writer, oKey *datastore.Key) erro
 		} else if err != nil {
 			return err
 		}
-		name := fmt.Sprintf("%s/%d/%d/%d.png", base, t.Zoom, t.X, t.Y)
+		//name := fmt.Sprintf("%s/%d/%d/%d.png", base, t.Zoom, t.X, t.Y)
+		name := fmt.Sprintf("%s/%d.%d.%d.png", base, t.Zoom, t.X, t.Y)//anadido para que guarde las tiles en formato zoom-X-Y.png y no en carpetas, de forma que sea mas facil subirlas al server java
 		w, err := z.Create(name)
 		if err != nil {
 			return err

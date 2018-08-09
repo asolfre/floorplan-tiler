@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Overlay Tiler Generated Map</title>
+    <title>Floorplan Tiler Generated Map</title>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <style>
       html, body, #map {
@@ -22,7 +22,7 @@
             if (!inBounds(coord, zoom)) {
               return null;
             }
-            return [zoom, coord.x, coord.y + '.png'].join('/')
+            return [zoom, coord.x, coord.y + '.png'].join('.')
           },
           tileSize: new google.maps.Size(256, 256)
         });

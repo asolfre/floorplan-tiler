@@ -1,5 +1,5 @@
-application: overlay-tiler
-version: 2-dev
+application: floorplan-tiler
+version: 1
 runtime: go
 api_version: go1
 

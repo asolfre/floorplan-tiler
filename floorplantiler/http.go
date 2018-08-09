@@ -2,7 +2,7 @@
 // Author: Chris Broadfoot (cbro@google.com)
 // Author: Andrew Gerrand (adg@google.com)
 
-package overlaytiler
+package floorplantiler
 
 import (
 	"encoding/json"

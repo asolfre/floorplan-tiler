@@ -1,7 +1,7 @@
 // Copyright (c) Google Inc. All Rights Reserved.
 // Author: Chris Broadfoot (cbro@google.com)
 
-package overlaytiler
+package floorplantiler
 
 import (
 	"errors"
