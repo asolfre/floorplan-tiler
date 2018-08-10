@@ -1,3 +1,6 @@
+language: go
+go:
+  - "1.10"
 deploy:
   provider: gae
   keyfile: appengine-service-key.json
