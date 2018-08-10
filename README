@@ -5,3 +5,5 @@ Check out graphics-go:
 mkdir -p code.google.com/p
 cd code.google.com/p
 hg clone https://code.google.com/r/cbro-graphics-go/ graphics-go
+
+Codacy Badge
