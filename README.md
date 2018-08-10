@@ -9,7 +9,7 @@ https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Go
 Check out graphics-go:
 
 ``` bash
-mkdir -p code.google.com/p
-cd code.google.com/p
-hg clone https://code.google.com/r/cbro-graphics-go/ graphics-go
+mkdir -p github.com/BurntSushi
+cd github.com/BurntSushi
+git clone https://github.com/BurntSushi/graphics-go.git graphics-go
 ```

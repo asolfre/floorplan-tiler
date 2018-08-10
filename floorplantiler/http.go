@@ -18,7 +18,7 @@ import (
 	"appengine/taskqueue"
 	"appengine/user"
 
-	"code.google.com/p/graphics-go/graphics"
+	"github.com/BurntSushi/graphics-go/graphics"
 )
 
 func init() {

@@ -22,8 +22,8 @@ import (
 	"appengine/datastore"
 	"appengine/taskqueue"
 
-	"code.google.com/p/graphics-go/graphics"
-	"code.google.com/p/graphics-go/graphics/interp"
+	"github.com/BurntSushi/graphics-go/graphics"
+	"github.com/BurntSushi/graphics-go/graphics/interp"
 
 	"timer"
 )
