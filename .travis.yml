@@ -12,3 +12,4 @@ before_install:
   - mkdir -p github.com/BurntSushi
   - cd github.com/BurntSushi
   - git clone https://github.com/BurntSushi/graphics-go.git graphics-go
+  - cd ..
