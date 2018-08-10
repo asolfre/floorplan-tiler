@@ -2,6 +2,7 @@ deploy:
   provider: gae
   keyfile: appengine-service-key.json
   project: floorplan-tiler
+  version: travisci
 before_install:
 - openssl aes-256-cbc -K $encrypted_11e35f66499e_key -iv $encrypted_11e35f66499e_iv
   -in appengine-service-key.json.enc -out appengine-service-key.json -d
