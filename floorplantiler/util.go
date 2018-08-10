@@ -22,7 +22,7 @@ import (
 	"appengine/datastore"
 	"appengine/taskqueue"
 
-	"code.google.com/p/graphics-go/graphics"
+	"github.com/BurntSushi/graphics-go/graphics"
 )
 
 // inverse returns the inverse 3x3 matrix of a graphics.Affine.
