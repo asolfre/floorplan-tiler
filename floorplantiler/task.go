@@ -17,10 +17,10 @@ import (
 	"net/url"
 	"time"
 
-	"appengine"
-	"appengine/channel"
-	"appengine/datastore"
-	"appengine/taskqueue"
+	"google.golang.org/appengine"
+	"google.golang.org/appengine/channel"
+	"google.golang.org/appengine/datastore"
+	"google.golang.org/appengine/taskqueue"
 
 	"github.com/BurntSushi/graphics-go/graphics"
 	"github.com/BurntSushi/graphics-go/graphics/interp"
@@ -34,7 +34,7 @@ func init() {
 	http.Handle("/zip", appHandler(zipHandler))
 }
 
-// sliceHandler fetches Tile tasks from the tileQueue, 
+// sliceHandler fetches Tile tasks from the tileQueue,
 // generates and stores an image for each Tile, and - if all the
 // tiles have been generated - kicks off the zip task.
 func sliceHandler(c appengine.Context, w http.ResponseWriter, r *http.Request) *appError {
@@ -283,7 +283,7 @@ func addTilesToZip(c appengine.Context, z *zip.Writer, oKey *datastore.Key) erro
 			return err
 		}
 		//name := fmt.Sprintf("%s/%d/%d/%d.png", base, t.Zoom, t.X, t.Y)
-		name := fmt.Sprintf("%s/%d.%d.%d.png", base, t.Zoom, t.X, t.Y)//anadido para que guarde las tiles en formato zoom-X-Y.png y no en carpetas, de forma que sea mas facil subirlas al server java
+		name := fmt.Sprintf("%s/%d.%d.%d.png", base, t.Zoom, t.X, t.Y) //anadido para que guarde las tiles en formato zoom-X-Y.png y no en carpetas, de forma que sea mas facil subirlas al server java
 		w, err := z.Create(name)
 		if err != nil {
 			return err

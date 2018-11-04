@@ -17,10 +17,10 @@ import (
 	_ "image/jpeg"
 	_ "image/png"
 
-	"appengine"
-	"appengine/blobstore"
-	"appengine/datastore"
-	"appengine/taskqueue"
+	"google.golang.org/appengine"
+	"google.golang.org/appengine/blobstore"
+	"google.golang.org/appengine/datastore"
+	"google.golang.org/appengine/taskqueue"
 
 	"github.com/BurntSushi/graphics-go/graphics"
 )

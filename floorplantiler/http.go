@@ -11,12 +11,12 @@ import (
 	"net/http"
 	"net/url"
 
-	"appengine"
-	"appengine/blobstore"
-	"appengine/channel"
-	"appengine/datastore"
-	"appengine/taskqueue"
-	"appengine/user"
+	"google.golang.org/appengine"
+	"google.golang.org/appengine/blobstore"
+	"google.golang.org/appengine/channel"
+	"google.golang.org/appengine/datastore"
+	"google.golang.org/appengine/taskqueue"
+	"google.golang.org/appengine/user"
 
 	"github.com/BurntSushi/graphics-go/graphics"
 )
@@ -129,10 +129,10 @@ func processHandler(c appengine.Context, w http.ResponseWriter, r *http.Request)
 	// Compute the transformation matrix.
 	a := graphics.I.Scale(1/float64(o.Width), 1/float64(o.Height)).
 		Mul(inverse(graphics.Affine{
-		o.TopRight[0] - o.TopLeft[0], o.BottomRight[0] - o.TopRight[0], o.TopLeft[0],
-		o.TopRight[1] - o.TopLeft[1], o.BottomRight[1] - o.TopRight[1], o.TopLeft[1],
-		0, 0, 1,
-	}))
+			o.TopRight[0] - o.TopLeft[0], o.BottomRight[0] - o.TopRight[0], o.TopLeft[0],
+			o.TopRight[1] - o.TopLeft[1], o.BottomRight[1] - o.TopRight[1], o.TopLeft[1],
+			0, 0, 1,
+		}))
 	o.Transform = []float64(a[:])
 
 	// TODO(cbro): get min/max zoom from user.

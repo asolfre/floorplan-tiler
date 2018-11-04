@@ -6,8 +6,8 @@ package floorplantiler
 import (
 	"fmt"
 
-	"appengine"
-	"appengine/datastore"
+	"google.golang.org/appengine"
+	"google.golang.org/appengine/datastore"
 )
 
 const (
