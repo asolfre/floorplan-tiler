@@ -25,7 +25,7 @@ import (
 	"github.com/BurntSushi/graphics-go/graphics"
 	"github.com/BurntSushi/graphics-go/graphics/interp"
 
-	"timer"
+	"../timer/timer"
 )
 
 func init() {
