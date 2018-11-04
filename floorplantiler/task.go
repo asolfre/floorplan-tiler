@@ -25,7 +25,7 @@ import (
 	"github.com/BurntSushi/graphics-go/graphics"
 	"github.com/BurntSushi/graphics-go/graphics/interp"
 
-	"../timer/timer"
+	"floorplan-tiler/timer"
 )
 
 func init() {
